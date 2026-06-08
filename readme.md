@@ -52,7 +52,7 @@ RamanSpectrometer.Solution
 ```
 
 ### 1.2 类图 / 模块关系图
-![示例图](plot\SpectrumData Acquisition-2026-06-08-070951.svg "模块关系图")
+
 ```mermaid
 classDiagram
     class Program {
@@ -133,7 +133,7 @@ classDiagram
         +double K
         +double B
         +double TargetPeakPosition
-        +double PeakSearchHalfWidth
+        +double PeakHalfWid
         +double BaselineMargin
         +int N
         +bool EnablePolynomialBaselineCorrection
@@ -315,7 +315,7 @@ I_{baselineCorrected}(x) = \max(0, I_{clean}(x) - P_n(x))
 积分窗口：
 
 \[
-[TargetPeakPosition - PeakSearchHalfWidth, TargetPeakPosition + PeakSearchHalfWidth]
+[PeakPos - PeakHalfWid, PeakPos + PeakHalfWid]
 \]
 
 默认即：
@@ -340,9 +340,7 @@ QuantitativeAnalysisService.ExtractPeak(spectrum)
 
 得到峰面积后：
 
-\[
-c = K \cdot Area + B
-\]
+$ c = K \cdot Area + B $
 
 代码对应：
 
@@ -429,6 +427,96 @@ src/RamanSpectrometer.App/bin/Debug/net10.0/drivers/PluginLaser.dll
 ```
 
 业务层不需要修改，因为主程序始终依赖 `ILaserController` 接口。
+测试文件为：PluginLaser.dll
+测试文件内容：
+```csharp
+namespace RamanSpectrometer.Hardware.Virtual;
+
+using RamanSpectrometer.Core.Control;
+using RamanSpectrometer.Core.Enums;
+using RamanSpectrometer.Core.Interfaces;
+using RamanSpectrometer.Core.Models;
+
+class TestSpectrometer(LaserSpectrometerControl bench) : ISpectrometerController
+{
+                //等待时间
+    private int _waitTime = 100;
+    private readonly LaserSpectrometerControl _bench = bench;
+
+                public bool Initialize(string deviceId) => true;
+
+    public void SetTime(int waitTime)
+    {
+        if (waitTime <= 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(waitTime), "Integration time must be greater than zero.");
+        }
+
+        _waitTime = waitTime;
+    }
+
+    public SpectrumData AcquireSpectrum()
+    {
+        //模拟等待时间
+        Thread.Sleep(_waitTime);
+
+        //控制逻辑：如果打开了激光器则读取相应原始光谱文件，否则生成暗光谱
+        return _bench.IsLaserOn
+            ? LoadFile(_bench.FilePath)
+            : GenerateDarkNoiseSpectrum();
+    }
+
+    public double Getconcentration()
+    {
+        return 26.0;
+    }
+
+    public DeviceStatus GetStatus() => DeviceStatus.Idle;
+
+    /// <summary>
+    /// 生成暗光谱
+    /// </summary>
+    /// <returns>data</returns>
+    private static SpectrumData GenerateDarkNoiseSpectrum()
+    {
+        const int dataLength = 1024;
+        var data = new SpectrumData(dataLength);
+        var random = new Random();
+
+        for (var i = 0; i < dataLength; i++)
+        {
+            data.Wavelengths[i] = 500 + i * (1000.0 / (dataLength - 1));
+            data.Intensities[i] = random.NextDouble() * 5.0;
+        }
+
+        return data;
+    }
+
+    private static SpectrumData LoadFile(string filePath)
+    {
+        if (!File.Exists(filePath))
+        {
+            throw new FileNotFoundException($"找不到文件: {filePath}", filePath);
+        }
+
+        var lines = File.ReadAllLines(filePath);
+        var data = new SpectrumData(lines.Length);
+
+        for (var i = 0; i < lines.Length; i++)
+        {
+            var parts = lines[i].Split(',');
+            if (parts.Length >= 2 && double.TryParse(parts[0], out var x) && double.TryParse(parts[1], out var y))
+            {
+                data.Wavelengths[i] = x;
+                data.Intensities[i] = y;
+            }
+        }
+
+        return data;
+    }
+}
+```
+其中Getconcentration函数返回值写死为：26.0用于做区分。
 
 ### 3.2 如何添加新光谱仪硬件
 
@@ -618,22 +706,10 @@ data/test_80mg.csv
 - 当前误差水平说明系统流程可用，但若要提升低浓度样品精度，建议：
   - 使用多点标定拟合 K 和 B。
   - 增加空白样品扣除固定背景。
-  - 调整 `PeakSearchHalfWidth` 和多项式阶数 `N`。
+  - 调整 `PeakHalfWid` 和多项式阶数 `N`。
   - 对随机噪声增加平滑滤波处理。
 
 ---
-
-## 6. 总结
-
-本系统通过接口隔离硬件控制与业务算法：
-
-- `ILaserController` 抽象激光器。
-- `ISpectrometerController` 抽象光谱仪。
-- `SpectrumData` 统一数据结构。
-- `QuantitativeAnalysisService` 封装定量分析算法。
-- `RamanSpectrometer.App` 使用主函数模拟完整采集、预处理和浓度计算流程。
-
-该设计便于后续替换真实硬件、调整算法参数和扩展定量分析模型。
 
 
 
