@@ -1,0 +1,12 @@
+E:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.Core\bin\Release\net10.0\RamanSpectrometer.Core.deps.json
+E:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.Core\bin\Release\net10.0\RamanSpectrometer.Core.dll
+E:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.Core\bin\Release\net10.0\RamanSpectrometer.Core.pdb
+E:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.Core\obj\Release\net10.0\RamanSpectrometer.Core.csproj.AssemblyReference.cache
+E:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.Core\obj\Release\net10.0\RamanSpectrometer.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.Core\obj\Release\net10.0\RamanSpectrometer.Core.AssemblyInfoInputs.cache
+E:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.Core\obj\Release\net10.0\RamanSpectrometer.Core.AssemblyInfo.cs
+E:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.Core\obj\Release\net10.0\RamanSpectrometer.Core.csproj.CoreCompileInputs.cache
+E:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.Core\obj\Release\net10.0\RamanSpectrometer.Core.dll
+E:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.Core\obj\Release\net10.0\refint\RamanSpectrometer.Core.dll
+E:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.Core\obj\Release\net10.0\RamanSpectrometer.Core.pdb
+E:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.Core\obj\Release\net10.0\ref\RamanSpectrometer.Core.dll

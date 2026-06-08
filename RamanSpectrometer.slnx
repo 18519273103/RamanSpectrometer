@@ -1,0 +1,18 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/RamanSpectrometer.Core/">
+    <Project Path="src/RamanSpectrometer.Core/RamanSpectrometer.Core.csproj" />
+  </Folder>
+  <Folder Name="/src/RamanSpectrometer.Hardware/">
+    <Project Path="src/RamanSpectrometer.Hardware/RamanSpectrometer.Hardware.csproj" />
+  </Folder>
+  <Folder Name="/src/RamanSpectrometer.Services/">
+    <Project Path="src/RamanSpectrometer.Services/RamanSpectrometer.Services.csproj" />
+  </Folder>
+  <Folder Name="/src/RamanSpectrometer.App/">
+    <Project Path="src/RamanSpectrometer.App/RamanSpectrometer.App.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/RamanSpectrometer.Tests/RamanSpectrometer.Tests.csproj" />
+  </Folder>
+</Solution>
