@@ -16,7 +16,7 @@
 
   "HardwareConfig": {
     "LaserType": "VirtualLaser",
-    "SpectrometerType": "VirtualSpectrometer",
+    "SpectrometerType": "TestSpectrometer",
     "PluginPath": "drivers"
   }
 }

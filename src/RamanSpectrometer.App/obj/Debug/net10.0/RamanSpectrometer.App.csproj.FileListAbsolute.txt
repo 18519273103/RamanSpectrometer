@@ -1,10 +1,7 @@
 e:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.App\bin\Debug\net10.0\application.json
 e:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.App\bin\Debug\net10.0\data\calib_50mg.csv
-e:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.App\bin\Debug\net10.0\data\calib_50mg1.csv
 e:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.App\bin\Debug\net10.0\data\test_20mg.csv
-e:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.App\bin\Debug\net10.0\data\test_20mg1.csv
 e:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.App\bin\Debug\net10.0\data\test_80mg.csv
-e:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.App\bin\Debug\net10.0\data\test_80mg1.csv
 e:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.App\bin\Debug\net10.0\RamanSpectrometer.App.exe
 e:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.App\bin\Debug\net10.0\RamanSpectrometer.App.deps.json
 e:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.App\bin\Debug\net10.0\RamanSpectrometer.App.runtimeconfig.json
@@ -39,3 +36,4 @@ e:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.App\obj\Deb
 e:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.App\obj\Debug\net10.0\RamanSpectrometer.App.pdb
 e:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.App\obj\Debug\net10.0\RamanSpectrometer.App.genruntimeconfig.cache
 e:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.App\obj\Debug\net10.0\ref\RamanSpectrometer.App.dll
+E:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.App\obj\Debug\net10.0\RamanSpectrometer.App.sourcelink.json

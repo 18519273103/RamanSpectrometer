@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RamanSpectrometer.Hardware")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+482d25ceec9ea4c7e1f86fc2381392d5a2c27331")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5dda361b7496663e8f8c21f19749fe4f8e7c0cf3")]
 [assembly: System.Reflection.AssemblyProductAttribute("RamanSpectrometer.Hardware")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RamanSpectrometer.Hardware")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

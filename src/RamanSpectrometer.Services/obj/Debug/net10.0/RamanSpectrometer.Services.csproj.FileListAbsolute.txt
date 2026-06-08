@@ -28,3 +28,4 @@ e:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.Services\ob
 e:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.Services\obj\Debug\net10.0\refint\RamanSpectrometer.Services.dll
 e:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.Services\obj\Debug\net10.0\RamanSpectrometer.Services.pdb
 E:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.Services\obj\Debug\net10.0\ref\RamanSpectrometer.Services.dll
+E:\project\Solution\RamanSpectrometer.Solution\src\RamanSpectrometer.Services\obj\Debug\net10.0\RamanSpectrometer.Services.sourcelink.json

@@ -1,7 +1,7 @@
 {
   "SpectrometerConfig": {
-    "FilePath": "E:\\project\\Solution\\RamanSpectrometer.Solution\\data\\calib_50mg.csv",
-    "concentration": 50.0
+    "FilePath": "E:\\project\\Solution\\RamanSpectrometer.Solution\\data\\test_80mg.csv",
+    "concentration": 80.0
   },
 
   "HyperparameterConfig": {
@@ -16,7 +16,7 @@
 
   "HardwareConfig": {
     "LaserType": "VirtualLaser",
-    "SpectrometerType": "VirtualSpectrometer",
+    "SpectrometerType": "TestPlugin",
     "PluginPath": "drivers"
   }
 }

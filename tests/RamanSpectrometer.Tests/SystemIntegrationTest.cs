@@ -25,10 +25,6 @@ public class SystemIntegrationTest : IDisposable
     [Fact]
     public void RunFullPipelineTest()
     {
-        WriteLine("=====================================================");
-        WriteLine("拉曼光谱定量分析系统 - 全链路集成测试启动");
-        WriteLine("=====================================================");
-        WriteLine();
 
         WriteLine("[阶段 1: 初始化系统环境]");
 

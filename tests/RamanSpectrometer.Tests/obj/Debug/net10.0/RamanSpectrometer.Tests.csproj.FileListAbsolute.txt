@@ -114,3 +114,4 @@ e:\project\Solution\RamanSpectrometer.Solution\tests\RamanSpectrometer.Tests\obj
 e:\project\Solution\RamanSpectrometer.Solution\tests\RamanSpectrometer.Tests\obj\Debug\net10.0\RamanSpectrometer.Tests.pdb
 e:\project\Solution\RamanSpectrometer.Solution\tests\RamanSpectrometer.Tests\obj\Debug\net10.0\RamanSpectrometer.Tests.genruntimeconfig.cache
 e:\project\Solution\RamanSpectrometer.Solution\tests\RamanSpectrometer.Tests\obj\Debug\net10.0\ref\RamanSpectrometer.Tests.dll
+E:\project\Solution\RamanSpectrometer.Solution\tests\RamanSpectrometer.Tests\obj\Debug\net10.0\RamanSpectrometer.Tests.sourcelink.json
